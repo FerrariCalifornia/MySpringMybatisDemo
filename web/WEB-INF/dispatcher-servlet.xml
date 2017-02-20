@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:annotation-config />
+    <mvc:annotation-driven/>
+    <context:component-scan base-package="com.cc.controller"></context:component-scan>
+    <mvc:cors>
+
+        <!--<mvc:mapping path="/"-->
+                     <!--allowed-origins="http://domain1.com, http://domain2.com,http://localhost:63342"-->
+                     <!--allowed-methods="GET, PUT"-->
+                     <!--allowed-headers="header1, header2, header3"-->
+                     <!--exposed-headers="header1, header2" allow-credentials="false"-->
+                     <!--max-age="123" />-->
+
+            <mvc:mapping path="/"
+                         allowed-origins="*"
+                         allowed-methods="POST, GET, OPTIONS, DELETE, PUT"
+                         allowed-headers="Content-Type,Access-Control-Allow-Headers, Authorization, X-Requested-With"
+                         allow-credentials="true" />
+
+        <!--<mvc:mapping path="/"-->
+                     <!--allowed-origins="http://localhost:63342" />-->
+
+    </mvc:cors>
+
+</beans>

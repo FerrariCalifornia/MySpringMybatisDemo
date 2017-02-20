@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="demo">
+<head>
+    <title>Hello AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="book.js"></script>
+</head>
+
+<body>
+<div ng-controller="book">
+    <p> ID: {{book.id}}</p>
+    <p> {{book.bookName}}</p>
+    <p> {{book.publisher}}</p>
+    <p> {{book.author}}</p>
+    <p> {{book.summary}}</p>
+</div>
+</body>
+</html>
